@@ -1,0 +1,142 @@
+@import "variables";
+
+.sub-header {
+  display: flex;
+  gap: 20px;
+  font-size: $font-size;
+  a {
+    padding: 10px;
+    color: $color-tone;
+    border: solid 1px $color-tone;
+    height: 40px;
+    transition: background-color 0.3s;
+    &:hover {
+      color: white;
+      background-color: $color-tone;
+    }
+  }
+}
+.random-box {
+  display: flex;
+  flex-direction: column;
+  .agent {
+    display: flex;
+    flex-direction: column;
+  }
+  .agent-start {
+    
+    margin: 0 auto;
+    text-align: center;
+    width: 150px;
+    font-size: $font-size;
+    margin-top: 10px;
+    border: solid 3px $color-tone;
+    border-radius: 23px;
+    padding: 10px;
+    transition: background-color 0.3s;
+    &:hover {
+      color: white;
+      background-color: $color-tone;
+    }
+  }
+}
+
+.role-items {
+  color: $color-tone;
+  font-size: 30px;
+  margin-top: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 23px;
+  border: solid 2px $color-tone;
+  a {
+    text-align: center;
+    color: $color-tone;
+    width: 100%;
+    padding: 10px;
+    transition: background-color 0.3s;
+    position: relative;
+
+    &:hover {
+      color: white;
+      background-color: $color-tone;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 100%;
+      top: 0;
+      right: 0;
+      background-color: transparent; /* Màu sắc mặc định của phần gap */
+      pointer-events: none;
+      transition: background-color 0.3s;
+    }
+    &:first-child {
+      border-top-left-radius: 23px;
+      border-bottom-left-radius: 23px;
+    }
+
+    &:last-child {
+      border-top-right-radius: 23px;
+      border-bottom-right-radius: 23px;
+    }
+  }
+}
+.list-champs {
+  .champs {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    width: 1000px;
+    a {
+      img {
+        margin-top: 20px;
+        border: solid 3px $color-tone;
+        border-radius: 23px;
+        width: 80px;
+        height: 70px;
+      }
+    }
+  }
+}
+.avatar {
+  margin-top: 20px;
+  border: solid 3px $color-tone;
+  border-radius: 23px;
+  width: 150px;
+  height: 140px;
+}
+@keyframes scaleEffect {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+    border: solid 7px $color-tone;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.active {
+  animation: scaleEffect 1s;
+}
+.active-box {
+  display: block;
+}
+.avatar {
+  display: none;
+}
+.avatars {
+  display: none;
+  img {
+    margin-top: 20px;
+    border: solid 3px $color-tone;
+    border-radius: 23px;
+    width: 150px;
+    height: 140px;
+  }
+}

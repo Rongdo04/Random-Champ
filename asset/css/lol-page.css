@@ -1,0 +1,142 @@
+@charset "UTF-8";
+.sub-header {
+  display: flex;
+  gap: 20px;
+  font-size: 20px;
+}
+.sub-header a {
+  padding: 10px;
+  color: Brown;
+  border: solid 1px Brown;
+  height: 40px;
+  transition: background-color 0.3s;
+}
+.sub-header a:hover {
+  color: white;
+  background-color: Brown;
+}
+
+.random-box {
+  display: flex;
+  flex-direction: column;
+}
+.random-box .agent {
+  display: flex;
+  flex-direction: column;
+}
+.random-box .agent-start {
+  margin: 0 auto;
+  text-align: center;
+  width: 150px;
+  font-size: 20px;
+  margin-top: 10px;
+  border: solid 3px Brown;
+  border-radius: 23px;
+  padding: 10px;
+  transition: background-color 0.3s;
+}
+.random-box .agent-start:hover {
+  color: white;
+  background-color: Brown;
+}
+
+.role-items {
+  color: Brown;
+  font-size: 30px;
+  margin-top: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 23px;
+  border: solid 2px Brown;
+}
+.role-items a {
+  text-align: center;
+  color: Brown;
+  width: 100%;
+  padding: 10px;
+  transition: background-color 0.3s;
+  position: relative;
+}
+.role-items a:hover {
+  color: white;
+  background-color: Brown;
+}
+.role-items a::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: transparent; /* Màu sắc mặc định của phần gap */
+  pointer-events: none;
+  transition: background-color 0.3s;
+}
+.role-items a:first-child {
+  border-top-left-radius: 23px;
+  border-bottom-left-radius: 23px;
+}
+.role-items a:last-child {
+  border-top-right-radius: 23px;
+  border-bottom-right-radius: 23px;
+}
+
+.list-champs .champs {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  width: 1000px;
+}
+.list-champs .champs a img {
+  margin-top: 20px;
+  border: solid 3px Brown;
+  border-radius: 23px;
+  width: 80px;
+  height: 70px;
+}
+
+.avatar {
+  margin-top: 20px;
+  border: solid 3px Brown;
+  border-radius: 23px;
+  width: 150px;
+  height: 140px;
+}
+
+@keyframes scaleEffect {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+    border: solid 7px Brown;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.active {
+  animation: scaleEffect 1s;
+}
+
+.active-box {
+  display: block;
+}
+
+.avatar {
+  display: none;
+}
+
+.avatars {
+  display: none;
+}
+.avatars img {
+  margin-top: 20px;
+  border: solid 3px Brown;
+  border-radius: 23px;
+  width: 150px;
+  height: 140px;
+}
+
+/*# sourceMappingURL=lol-page.css.map */

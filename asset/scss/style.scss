@@ -1,0 +1,80 @@
+@import "variables";
+@import "header";
+@import "footer";
+@import "lol-page";
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  background-image: url("https://r4.wallpaperflare.com/wallpaper/32/804/961/spirit-blossom-yasuo-yasuo-league-of-legends-league-of-legends-riot-games-hd-wallpaper-48265de890201ce8a0ec913e28c2d43a.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 1200px;
+  width: 100%;
+  min-height: 100vh;
+  .content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 200px;
+    flex: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .icon-games {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+
+      #aov-icon,
+      #val-icon,
+      #lol-icon {
+        margin-top: 10px;
+        width: 100px;
+        height: 100px;
+        border-radius: 23px;
+        transition: transform 0.5s ease-in-out;
+      }
+      #lol-icon {
+        &:hover {
+          transform: translateY(20px);
+        }
+      }
+      #val-icon {
+        &:hover {
+          transform: translateY(20px);
+        }
+      }
+      #aov-icon {
+        &:hover {
+          transform: translateY(20px);
+        }
+      }
+      .name {
+        text-align: center;
+      }
+    }
+    h2 {
+      margin-right: 100px;
+      font-family: "Arizonia", cursive;
+      color: $color-tone;
+      font-size: 45px;
+      font-weight: 1;
+      line-height: 50px;
+    }
+  }
+}
+.active-box {
+  display: block;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

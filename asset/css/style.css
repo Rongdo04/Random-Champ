@@ -1,0 +1,294 @@
+@charset "UTF-8";
+.header {
+  width: 100%;
+  position: fixed;
+  font-size: 20px;
+}
+.header .nav-bar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+.header .nav-bar .dropdown {
+  font-size: 20px;
+  position: relative;
+  display: inline-block;
+  align-self: center;
+}
+.header .nav-bar .dropdown .dropdown-toggle {
+  font-size: 20px;
+  padding: 10px;
+  border: solid 1px Brown;
+  background-color: transparent;
+  color: Brown;
+  cursor: pointer;
+}
+.header .nav-bar .dropdown .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid Brown;
+  list-style: none;
+  padding: 0;
+}
+.header .nav-bar .dropdown .dropdown-menu li a {
+  transition: background-color 0.3s;
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
+.header .nav-bar .dropdown .dropdown-menu li a:hover {
+  background-color: Brown;
+}
+.header .nav-bar .dropdown:hover .dropdown-menu {
+  display: block;
+}
+.header .nav-bar .list-item {
+  display: flex;
+  gap: 50px;
+}
+.header .nav-bar .list-item a {
+  color: Brown;
+  border: solid 2px Brown;
+  padding: 10px;
+  gap: 20px;
+  border-radius: 40%;
+  transition: background-color 0.3s;
+}
+.header .nav-bar .list-item a:hover {
+  color: white;
+  background-color: Brown;
+}
+
+.footer {
+  margin-top: auto;
+  font-weight: 600;
+  color: Brown;
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
+  bottom: 0;
+  width: 100%;
+}
+
+.sub-header {
+  display: flex;
+  gap: 20px;
+  font-size: 20px;
+}
+.sub-header a {
+  padding: 10px;
+  color: Brown;
+  border: solid 1px Brown;
+  height: 40px;
+  transition: background-color 0.3s;
+}
+.sub-header a:hover {
+  color: white;
+  background-color: Brown;
+}
+
+.random-box {
+  display: flex;
+  flex-direction: column;
+}
+.random-box .agent {
+  display: flex;
+  flex-direction: column;
+}
+.random-box .agent-start {
+  margin: 0 auto;
+  text-align: center;
+  width: 150px;
+  font-size: 20px;
+  margin-top: 10px;
+  border: solid 3px Brown;
+  border-radius: 23px;
+  padding: 10px;
+  transition: background-color 0.3s;
+}
+.random-box .agent-start:hover {
+  color: white;
+  background-color: Brown;
+}
+
+.role-items {
+  color: Brown;
+  font-size: 30px;
+  margin-top: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 23px;
+  border: solid 2px Brown;
+}
+.role-items a {
+  text-align: center;
+  color: Brown;
+  width: 100%;
+  padding: 10px;
+  transition: background-color 0.3s;
+  position: relative;
+}
+.role-items a:hover {
+  color: white;
+  background-color: Brown;
+}
+.role-items a::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: transparent; /* Màu sắc mặc định của phần gap */
+  pointer-events: none;
+  transition: background-color 0.3s;
+}
+.role-items a:first-child {
+  border-top-left-radius: 23px;
+  border-bottom-left-radius: 23px;
+}
+.role-items a:last-child {
+  border-top-right-radius: 23px;
+  border-bottom-right-radius: 23px;
+}
+
+.list-champs .champs {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  width: 1000px;
+}
+.list-champs .champs a img {
+  margin-top: 20px;
+  border: solid 3px Brown;
+  border-radius: 23px;
+  width: 80px;
+  height: 70px;
+}
+
+.avatar {
+  margin-top: 20px;
+  border: solid 3px Brown;
+  border-radius: 23px;
+  width: 150px;
+  height: 140px;
+}
+
+@keyframes scaleEffect {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+    border: solid 7px Brown;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.active {
+  animation: scaleEffect 1s;
+}
+
+.active-box {
+  display: block;
+}
+
+.avatar {
+  display: none;
+}
+
+.avatars {
+  display: none;
+}
+.avatars img {
+  margin-top: 20px;
+  border: solid 3px Brown;
+  border-radius: 23px;
+  width: 150px;
+  height: 140px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  background-image: url("https://r4.wallpaperflare.com/wallpaper/32/804/961/spirit-blossom-yasuo-yasuo-league-of-legends-league-of-legends-riot-games-hd-wallpaper-48265de890201ce8a0ec913e28c2d43a.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 1200px;
+  width: 100%;
+  min-height: 100vh;
+}
+.container .content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 200px;
+  flex: 1;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container .content .icon-games {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+.container .content .icon-games #aov-icon,
+.container .content .icon-games #val-icon,
+.container .content .icon-games #lol-icon {
+  margin-top: 10px;
+  width: 100px;
+  height: 100px;
+  border-radius: 23px;
+  transition: transform 0.5s ease-in-out;
+}
+.container .content .icon-games #lol-icon:hover {
+  transform: translateY(20px);
+}
+.container .content .icon-games #val-icon:hover {
+  transform: translateY(20px);
+}
+.container .content .icon-games #aov-icon:hover {
+  transform: translateY(20px);
+}
+.container .content .icon-games .name {
+  text-align: center;
+}
+.container .content h2 {
+  margin-right: 100px;
+  font-family: "Arizonia", cursive;
+  color: Brown;
+  font-size: 45px;
+  font-weight: 1;
+  line-height: 50px;
+}
+
+.active-box {
+  display: block;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*# sourceMappingURL=style.css.map */
