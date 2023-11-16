@@ -15,12 +15,14 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   ireWpp.addEventListener("click", (e) => {
     e.preventDefault();
-    h2.textContent = `"Fight for the First Lands!"`;
+
     container.style.backgroundImage = `url("./asset/photo/irelia.jpg")`;
+    h2.textContent = `"Fight for the First Lands!"`;
   });
   LeeWpp.addEventListener("click", (e) => {
     e.preventDefault();
-    h2.textContent = `"We do what we must."`;
+
     container.style.backgroundImage = `url("./asset/photo/leesin.jpg")`;
+    h2.textContent = `"We do what we must."`;
   });
 });
