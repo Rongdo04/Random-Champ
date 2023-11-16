@@ -24,7 +24,6 @@
     flex-direction: column;
   }
   .agent-start {
-    
     margin: 0 auto;
     text-align: center;
     width: 150px;
@@ -120,6 +119,10 @@
   100% {
     transform: scale(1);
   }
+}
+#pick-1.isHere {
+  background-color: $color-tone;
+  color: white;
 }
 .active {
   animation: scaleEffect 1s;

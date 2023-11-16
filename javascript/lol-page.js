@@ -34,26 +34,27 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
       randomOne(allChampsCount, Champs);
     });
+    
+
     avatar.classList.toggle("active-box");
     avatars.classList.remove("active-box");
   });
-  const randomOne = (champsCount, arr) => {
+  const randomOne = (champsCount, arr, index = 0) => {
     Champs.forEach((x) => {
       x.classList.remove("active");
     });
-    let index = 0;
 
-    const myInterval = setInterval(() => {
+    if (index < 9) {
       index++;
-      randomIndex = Math.floor(Math.random() * champsCount);
+      const randomIndex = Math.floor(Math.random() * champsCount);
       const selectedItem = arr[randomIndex];
       selectedItem.classList.add("active");
       agentAvatar.src = selectedItem.src;
 
-      if (index === 9) {
-        clearInterval(myInterval);
-      }
-    }, 500);
+      setTimeout(() => {
+        randomOne(champsCount, arr, index);
+      }, 500);
+    }
   };
   const randomTeam = (champsCount, arr) => {
     const usedImagePaths = [];
@@ -62,27 +63,27 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     let index = 0;
-
-    const myInterval = setInterval(() => {
-      index++;
-      imgs.forEach((x) => {
+    const intervalId = setInterval(() => {
+      if (index < imgs.length) {
         let randomIndex;
         let selectedItem;
+
         do {
           randomIndex = Math.floor(Math.random() * champsCount);
           selectedItem = arr[randomIndex];
         } while (usedImagePaths.includes(selectedItem.src));
-        if (usedImagePaths.length < imgs.length) {
-          usedImagePaths.push(selectedItem.src);
-          x.src = selectedItem.src;
-          selectedItem.classList.add("active");
-        }
-      });
-      if (index === imgs.length) {
-        clearInterval(myInterval);
+
+        usedImagePaths.push(selectedItem.src);
+        imgs[index].src = selectedItem.src;
+        selectedItem.classList.add("active");
+
+        index++;
+      } else {
+        clearInterval(intervalId); // Dừng interval khi đã thêm class cho tất cả các phần tử
       }
     }, 500);
   };
+
   pickTeam.addEventListener("click", () => {
     isPickTeam = true;
     startBtnEnabled = true;
