@@ -30,11 +30,12 @@ document.addEventListener("DOMContentLoaded", () => {
   let startBtn = document.querySelector(".agent-start");
   let isPickTeam = false;
   pick_1.addEventListener("click", () => {
-    startBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      randomOne(allChampsCount, Champs);
-    });
-    
+    if (startBtnEnabled) {
+      startBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        randomOne(allChampsCount, Champs);
+      });
+    }
 
     avatar.classList.toggle("active-box");
     avatars.classList.remove("active-box");
@@ -86,16 +87,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   pickTeam.addEventListener("click", () => {
     isPickTeam = true;
-    startBtnEnabled = true;
     avatars.classList.toggle("active-box");
     avatar.classList.remove("active-box");
-    startBtn.addEventListener("click", (e) => {
-      if (startBtnEnabled) {
+
+    if (startBtnEnabled) {
+      startBtn.addEventListener("click", (e) => {
         e.preventDefault();
         randomTeam(allChampsCount, Champs);
-      }
-    });
+      });
+    }
   });
+
   let i = 0;
   Champs.forEach((x) => {
     x.addEventListener("click", (e) => {
